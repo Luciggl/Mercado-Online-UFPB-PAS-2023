@@ -1,0 +1,19 @@
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px; /* Adapte conforme necessário */
+}
+
+.logoPesquisa {
+    display: flex;
+    align-items: center;
+}
+
+.logoPesquisa img {
+    margin-right: 10px; /* Ajuste conforme necessário */
+}
+
+.error{
+    color: red;
+}
