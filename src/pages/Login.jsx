@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import Botao from "../components/itens/Botao";
 import CampoTexto from "../components/itens/CampoTexto";
 import { UserContext } from "../context/user-context";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './login.css'
 
 const Login = () => {
@@ -10,7 +10,7 @@ const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
 
     const handlerLogin = () => {
@@ -30,7 +30,7 @@ const Login = () => {
         }
 
         setUser(username);
-        // navigate('/home')
+        navigate('/home')
     }
     return (
         <div className="login-container">
