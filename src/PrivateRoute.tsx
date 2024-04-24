@@ -1,8 +1,6 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { UserContext } from "./context/user-context";
-import {Route,Navigate,Outlet} from 'react-router-dom'
-
-
+import { Route, Navigate, Outlet } from 'react-router-dom'
 
 export type PrivateRouteProps = {
     Children: React.ReactNode;
@@ -10,9 +8,11 @@ export type PrivateRouteProps = {
 }
 
 export function PrivateRoute() {
-    const {user} = useContext(UserContext);
+    const { user } = useContext(UserContext);
 
-    if(!user){
-        return <Navigate to="/login"/>
+    if (!user) {
+        return <Navigate to="/login" />
     }
+
+    return <Outlet />
 }

@@ -1,15 +1,21 @@
+import { Routes, Route, Navigate } from 'react-router-dom'
+import Login from './pages/Login';
+import Home from './pages/Home';
+import PrivateRoute from './PrivateRoute'
 import './App.css'
-import Cabecalho from './components/Cabecalho'
 
-function App() {
-
+const App = () => {
+  console.log('Excultando')
   return (
-    <>
-      <div>
-       <Cabecalho/>
-      </div>
-    </>
-  )
-}
+    <Routes>
+      <Route path="/" element={<Navigate to="/login" />} />
+      <Route path='/login' Component={Login} />
+      {/* rotas privadas */}
+      <Route element={<PrivateRoute />}>
+        <Route path='/home' Component={Home} />
+      </Route>
+    </Routes>
+  );
+};
 
-export default App
+export default App;

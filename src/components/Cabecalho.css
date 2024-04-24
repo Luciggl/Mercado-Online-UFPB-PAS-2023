@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px; /* Adapte conforme necessário */
+    padding: 5px 10px; 
 }
 
 .logoPesquisa {
@@ -11,7 +11,7 @@
 }
 
 .logoPesquisa img {
-    margin-right: 10px; /* Ajuste conforme necessário */
+    margin-right: 10px; 
 }
 
 .error{
