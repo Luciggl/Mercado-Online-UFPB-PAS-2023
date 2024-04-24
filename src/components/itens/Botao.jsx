@@ -1,6 +1,6 @@
-const Botao = ({texto, funcao}) => {
+const Botao = ({classP, texto, funcao}) => {
     return (
-        <button className="button" onClick={funcao}>
+        <button className={classP} onClick={funcao}>
             {texto}
         </button>
     )

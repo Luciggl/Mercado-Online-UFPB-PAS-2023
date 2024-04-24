@@ -1,14 +1,13 @@
-import Pesquisa from './itens/Pesquisa';
+import Pesquisa from './Pesquisa';
 import logo from '../assets/imgs/logo.png';
 import Botao from './itens/Botao';
 import './Cabecalho.css'
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Cabecalho = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const handlerLogin = () => {
-        { alert('vc clicou em login') }
-        // navigate('/login')
+        navigate('/login')
     }
     return (
         <nav className='container-logo'>
@@ -16,7 +15,7 @@ const Cabecalho = () => {
                 <img src={logo} />
                 <Pesquisa />
             </div>
-            <Botao texto={'Login'} funcao={handlerLogin} />
+            <Botao classP={'button'} texto={'Login'} funcao={handlerLogin} />
         </nav>
     )
 }

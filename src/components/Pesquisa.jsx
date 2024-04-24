@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Botao from "./Botao";
-import CampoTexto from "./CampoTexto";
+import Botao from "./itens/Botao";
+import CampoTexto from "./itens/CampoTexto";
 
 const Pesquisa = () => {
     const [pesquisaTexto, setPesquisaTexto] = useState('');
