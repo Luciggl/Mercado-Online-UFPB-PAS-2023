@@ -28,7 +28,7 @@ const Cabecalho = () => {
             <nav className='container-logo'>
                 <div className="logoPesquisa">
                     <MenuIcon />
-                    <img src={logo} />
+                    <a href="/home"><img src={logo} /></a>
                 </div>
                 <div>
                     <Pesquisa />

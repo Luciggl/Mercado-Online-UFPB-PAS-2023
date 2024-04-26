@@ -13,10 +13,12 @@
   }
 
   .container-cardItens:hover {
-    background-color: #f1f1f1;
+    background-color: #fff;
     img{
         background-color: #FFF;
     }
+    border: 1px solid #2ecc71;
+    box-shadow: #2ecc71;
   }
 
   .container-cardItens h2 {

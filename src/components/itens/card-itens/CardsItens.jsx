@@ -21,7 +21,7 @@ const CardItems = ({ ProdutoImg, titulo, descricao,
                         funcao={addCart} />
                 </div>
             </div>
-            <h2><StarRating rating={avaliacao}/></h2>
+            <h2><StarRating rating={avaliacao} /></h2>
         </div>
     )
 }
