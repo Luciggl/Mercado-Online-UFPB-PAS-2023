@@ -1,32 +1,42 @@
+/* Estilos para o container do cabeçalho */
 .container-logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #fff; 
-    border: 1px solid #9e9c9c;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos para o logotipo */
 .logoPesquisa {
     display: flex;
     align-items: center;
 }
 
 .logoPesquisa img {
-    width: 100px; 
-    margin-right: 10px; 
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
 }
 
 .button {
     background-color: #2ecc71;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 8px 20px; 
+    border-radius: 20px;
+    padding: 12px 30px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100px;
+    /* Definindo uma largura fixa para igualar ao botão de pesquisa */
+    text-align: center;
+    /* Alinhando o texto ao centro */
 }
 
 .button:hover {
-    background-color: #27ae60; 
+    background-color: #27ae60;
 }

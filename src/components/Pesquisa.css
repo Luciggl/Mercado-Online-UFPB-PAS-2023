@@ -5,22 +5,29 @@
 
 .pesquisa-input {
     flex: 1;
-    margin-right:10px ;
-    width: 500px;
-    padding: 20px;
+    width: 340px;
+    padding: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    margin-right: 20px;
+    /* Adicionei um espaçamento à direita */
+}
+
+.pesquisa-input::placeholder {
+    color: #999;
 }
 
 .pesquisa-button {
-    width: auto;
     background-color: #2ecc71;
     color: #fff;
     border: none;
-    border-radius: 0 5px 5px 0;
-    padding: 12px 30px;
+    border-radius: 20px;
+    padding: 12px 24px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
 .pesquisa-button:hover {
@@ -30,5 +37,8 @@
 .error {
     color: red;
     margin-top: 5px;
+    margin-top: 10px;
+    /* Mantive a margem superior */
+    margin-right: 20px;
+    /* Ajustei a margem à direita */
 }
-

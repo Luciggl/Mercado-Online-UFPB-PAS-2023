@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Botao from "./itens/Botao";
-import CampoTexto from "./itens/CampoTexto";
 import "./Pesquisa.css";
 
 const Pesquisa = () => {
@@ -15,22 +14,21 @@ const Pesquisa = () => {
 
     return (
         <div className="container">
-
             <div className="pesquisa-container">
-                <CampoTexto
-                    tipo={'text'}
-                    textoExibir={'Search'}
-                    valor={pesquisaTexto}
-                    funcao={setPesquisaTexto}
+                <input
+                    type="text"
+                    placeholder="Pesquise Aqui"
+                    value={pesquisaTexto}
+                    onChange={(e) => setPesquisaTexto(e.target.value)}
                     className="pesquisa-input"
                 />
                 <Botao
                     classP={'pesquisa-button'}
-                    texto={'Search'}
+                    texto={'Pesquisar'}
                     funcao={handlerSearch}
                 />
             </div>
-                {error && <div className="error">{error}</div>}
+            {error && <div className="error">{error}</div>}
         </div>
     );
 };
