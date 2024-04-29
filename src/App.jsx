@@ -1,14 +1,16 @@
-import { Routes, Route, Navigate} from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Login from './pages/Login/Login';
 import Home from './pages/Home';
 import Error from './pages/Error/Error';
 import Cadastro from './pages/Cadastro/Cadastro';
 import ShoppingCard from './pages/ShoppingCart';
 import PrivateRoute from './PrivateRoute'
+import { ProdutosProvider } from './context/produtos-context';
 import './App.css'
 
 const App = () => {
   return (
+    <ProdutosProvider>
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path='/login' Component={Login} />
@@ -20,6 +22,7 @@ const App = () => {
           <Route path='/shop' Component={ShoppingCard} />
         </Route>
       </Routes>
+    </ProdutosProvider>
   );
 };
 

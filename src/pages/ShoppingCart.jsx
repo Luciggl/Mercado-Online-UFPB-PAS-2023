@@ -4,7 +4,7 @@ import Botao from "../components/itens/Botao";
 const ShoppingCard = () => {
     const navigate = useNavigate();
     const handlerHome = () => {
-        console.log('clicoi')
+        console.log('clicou')
         navigate('/home')
     }
     return (
