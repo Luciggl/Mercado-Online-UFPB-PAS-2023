@@ -35,8 +35,17 @@
     /* Definindo uma largura fixa para igualar ao botão de pesquisa */
     text-align: center;
     /* Alinhando o texto ao centro */
+    margin-right: 10px;
 }
-
-.button:hover {
+.button-perfil {
+    background-color: #979797;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 12px 12px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button:hover, .button-perfil:hover {
     background-color: #27ae60;
 }

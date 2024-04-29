@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ShoppingBagIcon, MenuIcon } from 'lucide-react';
+import { ShoppingBagIcon, MenuIcon, MapPin, CircleUser } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../../context/user-context';
@@ -35,7 +35,7 @@ const Cabecalho = () => {
     // Função para obter o nome do local a partir das coordenadas de latitude e longitude
     const getLocationName = (latitude, longitude) => {
         // Chamada para a API de geocodificação reversa (substitua pela sua própria chave de API)
-        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=SUA_CHAVE_DE_API`)
+        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=393e8068768e44f4ac99cc3eb219f95d`)
             .then(response => response.json())
             .then(data => {
                 const location = data.results[0]?.formatted;
@@ -61,11 +61,29 @@ const Cabecalho = () => {
         navigate('/error');
     };
 
+    const estaLogado = () => {
+        if (!user) {
+            return (
+                <Botao classP={'button'} texto={'Login'} funcao={handlerLogin} />
+                
+            )
+        } else {
+            return (
+                <div className='buttons'>
+                    <Botao classP={'button'} texto={<ShoppingBagIcon />} funcao={handlerCarrinho} />
+                    <Botao classP={'button-perfil'} texto={<CircleUser />} funcao={handlerError} />
+                </div>
+            )
+        }
+    }
+
     return (
         <>
+            <div className="locate">
+                {userLocation && <p><MapPin size={16} /> {userLocation}</p>}
+            </div>
             <nav className='container-logo'>
                 {/* Se houver uma localização definida, exibe o nome do local */}
-                {userLocation && <p>Localização atual: {userLocation}</p>}
                 <div className="logoPesquisa">
                     <MenuIcon />
                     <a href="/home"><img src={logo} alt="Logo" /></a>
@@ -73,7 +91,7 @@ const Cabecalho = () => {
                 <div>
                     <Pesquisa />
                 </div>
-                <Botao classP={'button'} texto={user ? <ShoppingBagIcon /> : 'Login'} funcao={user ? handlerCarrinho : handlerLogin} />
+                {estaLogado()}
             </nav>
             <div>
                 <br />
