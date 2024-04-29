@@ -1,10 +1,11 @@
 .container-cardItens {
-  width: 200px;
+  width: 250px;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Adicionando uma sombra suave */
+  display: flex;
+  flex-direction: column;
 }
 
 .container-cardItens img {
@@ -16,9 +17,7 @@
 .container-cardItens:hover {
   background-color: #fff;
   border: none;
-  /* Removendo a borda no hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Aumentando a sombra no hover */
 }
 
 .container-cardItens h2 {
@@ -26,10 +25,6 @@
   margin: 10px 0;
 }
 
-.container-cardItens p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
 
 .container-cardItens h3,
 .container-cardItens h4 {
@@ -40,7 +35,7 @@
 .price-and-button {
   display: flex;
   align-items: center;
-  margin-left: 60px;
+  margin-left: 100px;
 }
 
 .add-cart-btn {

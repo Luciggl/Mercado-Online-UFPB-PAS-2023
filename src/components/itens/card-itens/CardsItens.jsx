@@ -5,7 +5,7 @@ import StarRating from '../starRating/StarRating';
 const CardItems = ({ ProdutoImg, titulo, descricao,
     valor, avaliacao }) => {
     const addCart = () => {
-        console.log("add to cart")
+        alert('Adicionado ao carrinho!!')
     }
     return (
         <div className="container-cardItens">
