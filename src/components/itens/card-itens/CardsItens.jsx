@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import './CardItens.css';
 import Botao from '../Botao';
@@ -6,8 +7,8 @@ import StarRating from '../starRating/StarRating';
 
 const CardItems = ({ ProdutoImg, titulo, descricao, valor, avaliacao, adicionarAoCarrinho }) => {
     const addCart = () => {
-        adicionarAoCarrinho(titulo); // Certifique-se de que esta chamada está correta
-        console.log('Produto adicionado ao carrinho:', titulo); // Adicione este console.log para verificar se a função é chamada
+        adicionarAoCarrinho(titulo); // Chama a função adicionarAoCarrinho com o título do produto
+        console.log('Produto adicionado ao carrinho:', titulo); // Adiciona este console.log para verificar se a função é chamada
     };
 
     return (

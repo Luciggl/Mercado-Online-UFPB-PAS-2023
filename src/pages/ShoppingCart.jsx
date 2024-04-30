@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Botao from "../components/itens/Botao";
@@ -8,8 +9,9 @@ const ShoppingCard = () => {
     const [carrinho, setCarrinho] = useState([]);
 
     const adicionarAoCarrinho = (item) => {
-        setCarrinho([...carrinho, item]);
-        alert(`${item.title} adicionado ao carrinho!`);
+        // Use a função de atualização do estado para garantir que o estado anterior seja utilizado corretamente
+        setCarrinho((carrinhoAnterior) => [...carrinhoAnterior, item]);
+        alert(`${item.titulo} adicionado ao carrinho!`); // Ajuste para item.titulo
     };
 
     const handlerHome = () => {
@@ -31,7 +33,7 @@ const ShoppingCard = () => {
             <div className="card-content">
                 <ul className="item-list">
                     {carrinho.map((item, index) => (
-                        <li className="item" key={index}>{item.title}</li>
+                        <li className="item" key={index}>{item.titulo}</li>
                     ))}
                 </ul>
             </div>
@@ -44,7 +46,7 @@ const ShoppingCard = () => {
                 descricao={produto.descricao}
                 valor={produto.valor}
                 avaliacao={produto.avaliacao}
-                adicionarAoCarrinho={adicionarAoCarrinho} // Esta é a propriedade que deve ser passada corretamente
+                adicionarAoCarrinho={adicionarAoCarrinho} // Verifique se esta propriedade está sendo passada corretamente
             />
         </div>
     );
