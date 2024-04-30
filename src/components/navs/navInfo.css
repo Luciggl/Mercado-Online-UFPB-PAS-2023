@@ -1,3 +1,9 @@
-container-info{
-    align-items: center;
+.container-navInfo{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.container-navInfo > * {
+    margin: 0 10px;
 }

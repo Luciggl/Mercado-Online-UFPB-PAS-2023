@@ -5,8 +5,8 @@
   border-radius: 5px;
   padding: 15px;
   margin: 10px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   justify-content: space-between;
   /* Adiciona espaçamento entre os elementos dentro do card */
   transition: box-shadow 0.3s ease;
@@ -19,9 +19,11 @@
 
 .container-cardItens img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 5px;
 }
+
+
 
 .container-cardItens h2 {
   font-size: 18px;
@@ -43,6 +45,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.container-img{
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.container-buttom{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .add-cart-btn {

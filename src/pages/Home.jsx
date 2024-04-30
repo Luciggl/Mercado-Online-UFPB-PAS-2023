@@ -2,6 +2,7 @@ import Cabecalho from "../components/itens/Cabecalho/Cabecalho.jsx"
 import CardItems from "../components/itens/card-itens/CardsItens.jsx";
 import produtos from "../components/produtos.jsx";
 import NavInfo from "../components/navs/navInfo.jsx";
+import Banner from "../components/itens/Banner.jsx"
 
 import './Home.css'
 
@@ -10,6 +11,7 @@ const Home = () => {
     return (
         <>
             <Cabecalho />
+            <Banner imagePath="src/assets/imgs/image.png" altText="Descrição da imagem" />
             <NavInfo/>
             <div className="home-container">
                 {produtos.map(produto => (
