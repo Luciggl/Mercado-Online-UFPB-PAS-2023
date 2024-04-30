@@ -8,7 +8,6 @@ import Pesquisa from '../../Pesquisa';
 import logo from '../../../assets/imgs/logo.png';
 import Botao from '../Botao';
 import './Cabecalho.css';
-import Banner from '../Banner';
 
 
 const Cabecalho = () => {
@@ -103,7 +102,6 @@ const Cabecalho = () => {
                 <br />
                 <NavLink />
             </div>
-            <Banner imagePath="src/assets/imgs/image.png" altText="Descrição da imagem" />
         </>
     );
 };
