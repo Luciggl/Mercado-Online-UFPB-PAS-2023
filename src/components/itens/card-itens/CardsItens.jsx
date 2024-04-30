@@ -1,14 +1,14 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import './CardItens.css';
 import Botao from '../Botao';
 import StarRating from '../starRating/StarRating';
 
-const CardItems = ({ ProdutoImg, titulo, descricao, valor, avaliacao }) => {
+const CardItems = ({ ProdutoImg, titulo, descricao, valor, avaliacao, adicionarAoCarrinho }) => {
     const addCart = () => {
-        alert('Adicionado ao carrinho!!')
-    }
+        adicionarAoCarrinho(titulo); // Certifique-se de que esta chamada está correta
+        console.log('Produto adicionado ao carrinho:', titulo); // Adicione este console.log para verificar se a função é chamada
+    };
 
     return (
         <div className="container-cardItens">
@@ -26,7 +26,7 @@ const CardItems = ({ ProdutoImg, titulo, descricao, valor, avaliacao }) => {
             </div>
             <StarRating rating={avaliacao} />
         </div>
-    )
+    );
 }
 
 export default CardItems;
