@@ -5,16 +5,14 @@
 }
 
 .icone {
-    margin-right: 10px; 
+    margin-right: 10px;
     color: #000;
 }
 
 .texto {
     display: flex;
     flex-direction: column;
-    color:#000
+    color: #000
 }
 
-.titulo {
-
-}
+.titulo {}

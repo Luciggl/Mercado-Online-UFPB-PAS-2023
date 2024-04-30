@@ -8,6 +8,8 @@ import Pesquisa from '../../Pesquisa';
 import logo from '../../../assets/imgs/logo.png';
 import Botao from '../Botao';
 import './Cabecalho.css';
+import Banner from '../Banner';
+
 
 const Cabecalho = () => {
     const [userLocation, setUserLocation] = useState(null);
@@ -46,6 +48,8 @@ const Cabecalho = () => {
             });
     };
 
+
+
     // Navegar para a página de login
     const handlerLogin = () => {
         navigate('/login');
@@ -56,6 +60,8 @@ const Cabecalho = () => {
         navigate('/shop');
     };
 
+
+
     // Navegar para a página de erro
     const handlerError = () => {
         navigate('/error');
@@ -65,7 +71,7 @@ const Cabecalho = () => {
         if (!user) {
             return (
                 <Botao classP={'button'} texto={'Login'} funcao={handlerLogin} />
-                
+
             )
         } else {
             return (
@@ -97,8 +103,10 @@ const Cabecalho = () => {
                 <br />
                 <NavLink />
             </div>
+            <Banner imagePath="src/assets/imgs/image.png" altText="Descrição da imagem" />
         </>
     );
 };
+
 
 export default Cabecalho;

@@ -1,11 +1,14 @@
-.star-rating{
-    font-size: 24xp;
+.star-rating {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
 }
 
 .star {
-    cursur: pointer;
+    cursor: pointer;
 }
 
-.star.filled{
+.star.filled {
     color: #ffc107;
+    margin-right: 5px;
 }
