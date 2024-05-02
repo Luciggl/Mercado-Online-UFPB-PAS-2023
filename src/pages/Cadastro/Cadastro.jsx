@@ -28,6 +28,9 @@ const Cadastro = () => {
         if (!email.trim()) {
             setError("Por favor, insira um email.");
             return;
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            setError("Por favor, insira um email válido.");
+            return;
         }
 
         if (!endereco.trim()) {

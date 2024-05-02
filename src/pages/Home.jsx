@@ -11,7 +11,7 @@ import './Home.css'
 
 const Home = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [produtosPorPagina] = useState(5); // Defina o número de produtos por página
+    const [produtosPorPagina] = useState(8); // Defina o número de produtos por página
 
     // Obtenha os índices dos produtos a serem exibidos na página atual
     const indexOfLastProduto = currentPage * produtosPorPagina;
