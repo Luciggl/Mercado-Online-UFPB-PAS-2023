@@ -41,10 +41,11 @@ const Cadastro = () => {
         if (!senha.trim()) {
             setError("Por favor, insira uma senha.");
             return;
-        }
-
-        if (senha.length < 8) {
+        } else if (senha.length < 8) {
             setError("A senha deve conter pelo menos 8 caracteres.");
+            return;
+        } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/.test(senha)) {
+            setError("A senha deve conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.");
             return;
         }
 
